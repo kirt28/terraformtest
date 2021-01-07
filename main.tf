@@ -10,3 +10,10 @@ resource "aws_s3_bucket" "b" {
     Environment = "Dev"
   }
 }
+terraform {
+  backend "s3" {
+    bucket = "top-bar-1"
+    key    = "storage/tfstate"
+    region = "us-east-1"
+  }
+}
