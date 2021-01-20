@@ -10,7 +10,7 @@ resource "aws_s3_bucket" "b" {
 terraform {
   backend "s3" {
     bucket = "top-bar-1"
-    key    = ""
+    key    = "storage/s3tfstate"
     region = "us-east-1"
   }
 }
